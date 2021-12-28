@@ -51,7 +51,9 @@ function pAequorFactory (num, DNA_array) {
                 }
             }
             percentage = (numOfCorG/15) * 100;
-            return percentage >= 60;
+            if (percentage >= 60) {
+                console.log("This pAequor will most likely survive !")
+            }
         }
     }
 }
@@ -62,4 +64,4 @@ for (let k = 0; k < 30; k++) {
     pAequorArray.push(pAequorFactory(k, mockUpStrand()))
 }
 
-console.log(pAequorArray[1].willLikelySurvive());
+pAequorArray[1].willLikelySurvive();
